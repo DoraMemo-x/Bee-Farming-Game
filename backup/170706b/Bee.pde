@@ -1,6 +1,6 @@
 static final int BEE_RADIUS = 11;
 
-static final float[] beeFlightSpeed = {0.7, 0.85, 1.0, 1.3, 1.6, 1.8, 2.8};
+static final float[] beeFlightSpeed = {0.8, 0.95, 1.1, 1.4, 1.7, 1.9, 2.8};
 static final float[] beeHoneyPickingSpeed = {/*30*/10, 14, 21, 35, 60, 84, 105}; //gram per frame as unit, processing runs at 60FPS; not balanced
 static final float[] beeHoneyCapacity = {5000, 15000, 25000, 50000, 100000, 200000, 400000}; //in gram
 static final String[] beeName = {"Honee", "Milkee", "Harvee", "Lovee", "Joycee", "Happee"/*, "Jumbee"*/};

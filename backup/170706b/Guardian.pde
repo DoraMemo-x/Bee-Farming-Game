@@ -77,6 +77,10 @@ class Guardian {
   void updateGuardianTarget(String _guardianTarget) {
     guardianTarget = _guardianTarget;
   }
+  
+  void updateNextStage(boolean _nextStage) {
+    nextStage = _nextStage;
+  }
 
   void showGuardian() {
     if (speed == guardianFlightSpeed[0]) fill(186, 186, 255);

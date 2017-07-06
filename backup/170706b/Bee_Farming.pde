@@ -763,6 +763,9 @@ void draw() {
               for (Bee b : bees) {
                 b.updateNextStage(false);
               }
+              for (Guardian g : guardians) {
+                g.updateNextStage(false);
+              }
               forestsScreenActive = true;
             }
           } else {
@@ -816,6 +819,9 @@ void draw() {
           for (Bee b : bees) {
             b.updateNextStage(false);
           }
+          for (Guardian g : guardians) {
+                g.updateNextStage(false);
+              }
           forestsScreenActive = true;
         }
       }
