@@ -18,16 +18,19 @@ List<ArrayList<String>> dotPos = new ArrayList<ArrayList<String>>();
 
 float trailUsed = 0;
 int trailLimit = 325; //pixels
+boolean toggleTrail = false;
 
 int step = 0;
 void draw() {  
   stroke(255);
-  if (mousePressed == true && trailUsed < trailLimit) {
+  if (mousePressed) toggleTrail = true;
+  if (toggleTrail == true && trailUsed < trailLimit) {
     line(mouseX, mouseY, pmouseX, pmouseY);
     trailUsed += distance_between_two_points(mouseX, pmouseX, mouseY, pmouseY);
     pos.add(new float[] {mouseX, mouseY});
     //println(trailUsed);
   } else if (trailUsed >= trailLimit) {
+    toggleTrail = false;
     //line(pos.get(0)[0], pos.get(0)[1], pos.get(pos.size()-1)[0], pos.get(pos.size()-1)[1]);
 
     //println("Sorted Positions:");
@@ -120,7 +123,7 @@ void draw() {
            PVector pos2 = new PVector(float(positions2.get(0)), float(positions2.get(1)));
 
            if (pos1.x == pos2.x) {
-             if (COORx == pos1.x /*COORx > pos1.x-0.15 && COORx < pos1.x+0.15*/) {
+             if (/*COORx == pos1.x */ COORx > pos1.x-0.15 && COORx < pos1.x+0.15) {
                if (COORy > min(pos1.y, pos2.y)   &&   COORy < max(pos1.y, pos2.y)) {
                  //stroke(255);
                  //line(pos1.x, pos1.y, pos2.x, pos2.y);
@@ -142,7 +145,7 @@ void draw() {
             PVector pos2 = new PVector(float(positions2.get(0)), float(positions2.get(1)));
 
             if (pos1.y == pos2.y) {
-              if (COORy == pos1.y/* COORy > pos1.y-0.15 && COORy < pos1.y+0.15*/) {
+              if (/*COORy == pos1.y */ COORy > pos1.y-0.15 && COORy < pos1.y+0.15) {
                 if (COORx > min(pos1.x, pos2.x)   &&   COORx < max(pos1.x, pos2.x)) {
                   //stroke(255);
                   //line(pos1.x, pos1.y, pos2.x, pos2.y);
