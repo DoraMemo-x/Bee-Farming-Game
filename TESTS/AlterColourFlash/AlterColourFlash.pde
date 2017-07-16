@@ -1,3 +1,5 @@
+//last update: 170716b
+
 int timerA, timerB, interval = 1000; //ms
 boolean anotherColour = false;
 void setup() {
@@ -6,16 +8,21 @@ void setup() {
 }
 
 void draw() {
-  if (millis() - timerA > interval && anotherColour == false) {
-    timerA = millis();
-    timerB = millis();
+  background(0, 255, 0);
+
+  if (anotherColour == false) {
     background(255, 0, 0);
-    anotherColour = true;
-  }
-  if (millis() - timerB > interval && anotherColour) {
-    timerA = millis();
-    timerB = millis();
+    if (millis() - timerA > interval) {
+      timerA = millis();
+      timerB = millis();
+      anotherColour = true;
+    }
+  } else { //(if anotherColour == true)
     background(0, 0, 255);
-    anotherColour = false;
+    if (millis() - timerB > interval) {
+      timerA = millis();
+      timerB = millis();
+      anotherColour = false;
+    }
   }
 }
