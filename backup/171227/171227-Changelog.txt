@@ -1,0 +1,42 @@
+171227 ChangeLog:
+
+Enhancements:
++ BEES
+    - Added 4 training bees (Priest, Undead, Gardening, Rush). Summon using &, *, (, ).
+    - Target all bees to a flower - exception when the bee is full.
+
++ INVENTORY
+    - Added a "resource/item inventory" for further uses.
+    - Guardian inventory now shows tiers & ability cooldowns.
+    - Guardian inventory now has a mouse-hover tipbox.
+    - Bee inventory shows tiers & ability cooldowns.
+
+
+
+Bug Fixes:
++ INVENTORY
+    - Fixed a bug in bee inventory, where if a dead bee is sold, the icons go inconsistent
+    - Minimap now updates when a bee is sold
+    - Now removes inventoryBees before setting its values to DEAD.
+    - Ranged guardian icons are now consistent: inventory & minimap
+
+- Fixed a bug where sometimes, entities do not reach their assigned target. (forceful correction -> "Stucking to border" fix)
+- Fixed a bug in the first hornet forest where the next hornet timer is bugged
+- Fixed a bug where hornets are not removed from the forest when all bees are dead
+- Fixed a bug for training courses: now forestScreen round over, while GTOngoing, consistently changes to trainingScreen and show the result.
+
+    
+
+
+Known Bugs:
++ OLD BUGS
+- In the Royal Guardian training course, guardian would often get stucked on borders and end up using the "stucked to border fix" which is not optimal
+- When selected a guardian and pressed the beehive, it will not move towards it
+- On rare occasions the bees (happee+) cannot enter beehive. (not first person experience)
+
++ CODE CLEANUP NOTES!!!
+- Interation between bee and flower have lots of unnecessary variables
+- Pick honey, go in flower, tell bee it's not inside flower   logic is ambigious - quite difficult to force the bee out of the fucking flower
+
+
+
