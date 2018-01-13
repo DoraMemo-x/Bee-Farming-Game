@@ -1,0 +1,34 @@
+180113 ChangeLog:
+
+Enhancements:
++ BEE TRAINING
+    - Priest Bee & Gardening Bee training courses finished.
+
++ TECHNICAL
+    - Added a variable "timePassed" to replace (timeMillis - pMillis).
+    - Added a chargeBar function in GeneralFunctions, applicable for cooldown charge bars.
+
+- Resource spawning is now available.
+
+
+
+Bug Fixes:
+None
+    
+
+
+Known Bugs:
++ BEE TRAINING
+- Inconsistency of "entered zone" detection in Priest Bee training course.
+
++ OLD BUGS
+- In the Royal Guardian training course, guardian would often get stucked on borders and end up using the "stucked to border fix" which is not optimal
+- When selected a guardian and pressed the beehive, it will not move towards it
+- On rare occasions the bees (happee+) cannot enter beehive. (not first person experience)
+
++ CODE CLEANUP NOTES!!!
+- Interation between bee and flower have lots of unnecessary variables
+- Pick honey, go in flower, tell bee it's not inside flower   logic is ambigious - quite difficult to force the bee out of the fucking flower
+
+
+
