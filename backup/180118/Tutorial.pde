@@ -20,7 +20,7 @@ static abstract class TutorialStatus {
   static final int EndTutorial = 14;
 }
 //TutorialStatus status = TutorialStatus.BeforeTutorial;
-int status = TutorialStatus.EnemyFirefly; //0 (debugging. should be BeforeTutorial)
+int status = TutorialStatus.BeforeTutorial; //0 (debugging. should be BeforeTutorial)
 float tutorialMinorStep = status;
 boolean tutorialRequirements[] = new boolean[10];
 boolean tutorialPass = false;

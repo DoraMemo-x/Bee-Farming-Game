@@ -41,7 +41,7 @@ boolean gameScreenActive = false, shopScreenActive = false, sellShopScreenActive
   forestsScreenActive = false, guardianTrainScreenActive = false, beeTrainScreenActive = false, 
   beeInventoryScreenActive = false, guardianInventoryScreenActive = false, itemInventoryScreenActive = false, 
   startupScreenActive = true, tutorialScreenActive = false;
-;
+
 boolean roundOver = false, gameOver = false;
 
 long timeMillis = System.currentTimeMillis(), pMillis = System.currentTimeMillis(), timePassed;
