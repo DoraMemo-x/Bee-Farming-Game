@@ -49,7 +49,7 @@ long gameMillis = 0;
 long roundTime = 0;
 int week = 1;
 
-static final String VERSION = "Ver 18.01.21 <Pre-Alpha>";
+static final String VERSION = "Ver 18.01.23 <Pre-Alpha>";
 boolean debug = false;
 
 Button startGame;
