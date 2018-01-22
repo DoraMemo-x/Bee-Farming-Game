@@ -1,0 +1,52 @@
+180123 ChangeLog:
+
+Enhancements:
+- Added all the resource images
+- Added stage-based flower images for gardening bee course
+- Lowered the cost to purchase each training course for all of them
+- Increased the honey range of flowers from forest glow and above
+- Enhanced control of Bouncer Guardian
+- Mouse range now matches the beehive shape (even when upgraded)
+
++ FLOWERS
+- Lowered the spawn time of flowers after the factor exceeds a certain number
+- Added a chance-based "additional flower" spawning line (always true if flower size is 1 at the moment of trigger)
+- Made the honey capacity of flowers near the border of the screen higher. (Reasons: see dev notes)
+- Flowers now won't spawn near beehive
+- Flower honey capacity now has distinct colours, matching its stamen colour.
+
++ TECHNICAL
+- Speed correction due to frame drop
+- Bouncer guardian removed targetID[1] (not necessary)
+
+
+Bug Fixes:
+- Fixed a bug where the inventory buttons are greyed out even when the player is not in that inventory
+- Fixed a bug where the dead banner is still drawn even though the dead bee has been removed, due to the variable isBeeDead not being updated
+- Fixed a bug when the player has too many high-class bees in a lower tier forest, the flower spawn system bugs out (does not spawn flowers anymore)   - Fixed a bug where if the player JUST manages to finish the training course, and the time passes during the 5s countdown timer is shown, the training counted as a fail
+
++ Bouncer Guardian
+- Fixed a bug in the Bouncer Guardian course, where the disguised ladybugs are not correctly coloured
+- Fixed misdirecting target bug
+
+
+Known Bugs:
++ BEE TRAINING
+- Inconsistency of "entered zone" detection in Priest Bee training course.
+
++ OLD BUGS
+- In the Royal Guardian training course, guardian would often get stucked on borders and end up using the "stucked to border fix" which is not optimal
+- When selected a guardian and pressed the beehive, it will not move towards it
+- On rare occasions the bees (happee+) cannot enter beehive. (not first person experience)
+
++ CODE CLEANUP NOTES!!!
+1. use .clear() if you want to reset an ArrayList. not set it to new ArrayList.
+2. change all distance_between_two_points() to dist(). However the xy parameters are mixed up...
+3. in tutorial.pde, the 4-lined code for tipbox formatting is redundant. use the function tipboxFontFormat() instead.
+
+- Interation between bee and flower have lots of unnecessary variables
+- Pick honey, go in flower, tell bee it's not inside flower   logic is ambigious ; quite difficult to force the bee out of the fucking flower
+
+
+
+
