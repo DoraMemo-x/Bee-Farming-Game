@@ -1,0 +1,77 @@
+180831 ChangeLog:
+Application can be downloaded via https://goo.gl/fkzY7j.
+
+Enhancements:
++ Selection
+- Added "Drag Selection".
+- Added "Selection Wheel".
+
++ Bee
+- Removed artificial honey charge for Gardening Bee
+- Gardening Bee's ability is no longer affected by flower edge multipliers
+
++ Guardian
+- Guardians that are using abilities are no longer a valid target for "Misclick Leading"
+
++ Quest
+- Rephrased the requirement of money quest from "Store to" to "Save".
+- Increased difficulty of enemy quests. Test needed.
+
++ Result Card
+- Increased the flowers depleted stat threshold significantly. Test needed.
+
+
+
+Technical:
+- Code clean-up: changed all distance_between_two_points() to dist().
+- Changed the way that the bees store target flowers.
+
+
+
+
+
+Bug Fixes:
+- Fixed bug that caused the game to end after 15 weeks regardless.
+- Fixed bug that caused the undead bee lives information to not load.
+- Fixed bug which did not reset the training states when restarting a game.
+- Fixed visual bug: Hunter's Aura no longer show in guardian training.
+- Fixed visual bug: for baiting guardian training, the flowers now show below the guardian entity.
+- Fixed bug which did not include baiting guardian as a shortest distance flower candidate.
+
+- Test Needed! Beehive space reward disable when already have that reward.
+- Test Needed! Reset shop sale on load.
+
+
+
+
+
+Markings:
+- Implement a log output system (changing all println to output.println would work, but some of the printlns has commas. Annoying)
+- Make a "free play" mode. (no week limit, or rather, 256 weeks)
+- Further increase the frequency of resource spawning.
+- Balancing issues.
+- Refer to development notes
+
+
+
+
+
+Known Bugs:
+- Save file not saving "effectTakingPlace" variables
+
++ OLD BUGS
+- Inconsistency of "entered zone" detection in Priest Bee training course.
+- In the Royal Guardian training course, guardian would often get stucked on borders and end up using the "stucked to border fix" which is not optimal
+- When selected a guardian and pressed the beehive, it will not move towards it
+- On rare occasions the bees (happee+) cannot enter beehive. (not first person experience)
+
++ CODE CLEANUP NOTES!!!
+1. use .clear() if you want to reset an ArrayList. not set it to new ArrayList.
+2. in tutorial.pde, the 4-lined code for tipbox formatting is redundant. use the function tipboxFontFormat() instead.
+
+- Interation between bee and flower have lots of unnecessary variables
+- Pick honey, go in flower, tell bee it's not inside flower logic is ambigious ; quite difficult to force the bee out of the flower
+
+
+
+
